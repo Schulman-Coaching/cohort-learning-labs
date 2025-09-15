@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { CheckCircle, Target, Heart, Rocket } from 'lucide-react'
+import { Brain, Users, Heart, Target, Lightbulb, Shield, Award, Scale, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Us - Cohort Learning Labs',
-  description: 'Learn about our mission to empower small businesses with AI solutions and our experienced team of consultants.',
+  description: 'Led by Elie Schulman, we combine deep expertise in group facilitation, organizational dynamics, and AI technology to help small businesses thrive in the digital age.',
 }
 
 export default function AboutPage() {
@@ -16,51 +16,191 @@ export default function AboutPage() {
             About <span className="gradient-text">Cohort Learning Labs</span>
           </h1>
           <p className="text-xl text-primary-600 max-w-3xl">
-            We're on a mission to democratize AI for small businesses, making cutting-edge technology 
-            accessible and practical for organizations of all sizes.
+            Where human insight meets technological innovation. We specialize in helping small businesses 
+            navigate AI adoption through structured group learning and personalized facilitation.
           </p>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Founder Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-primary-900 mb-6">Our Story</h2>
-              <p className="text-lg text-primary-600 mb-4">
-                Founded in 2019, Cohort Learning Labs emerged from a simple observation: while large 
-                corporations were rapidly adopting AI technologies, small businesses were being left behind, 
-                not due to lack of interest, but due to lack of accessible expertise and resources.
-              </p>
-              <p className="text-lg text-primary-600 mb-4">
-                Our founder, with over a decade of experience in both AI development and small business 
-                consulting, recognized this gap and set out to bridge it. We started with a single client, 
-                a local retail business struggling with inventory management, and helped them implement 
-                an AI-powered solution that reduced waste by 40%.
-              </p>
-              <p className="text-lg text-primary-600">
-                Today, we've helped over 100 small businesses across various industries harness the power 
-                of AI, and we're just getting started. Our approach remains the same: practical, 
-                personalized, and focused on real results.
-              </p>
-            </div>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
-                alt="Our team at work"
-                className="rounded-2xl shadow-xl"
-              />
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
+              Meet Our Founder
+            </h2>
+            
+            <div className="bg-primary-50 rounded-2xl p-8 md:p-12">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="lg:w-1/3">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                    alt="Elie Schulman"
+                    className="w-full rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="lg:w-2/3">
+                  <h3 className="text-2xl font-bold text-primary-900 mb-2">Elie Schulman</h3>
+                  <p className="text-lg text-accent font-semibold mb-4">Founder & Lead Facilitator</p>
+                  
+                  <p className="text-primary-700 mb-4">
+                    Elie Schulman brings a unique blend of expertise to Cohort Learning Labs. With nearly 
+                    two decades of experience in group psychoanalysis, mindfulness practice, and organizational 
+                    development, he has mastered the art of fostering meaningful, transformative discussions 
+                    that drive real business results.
+                  </p>
+                  
+                  <p className="text-primary-700 mb-4">
+                    As a practicing lawyer specializing in complex interpersonal conflicts and mediation, 
+                    Elie understands the challenges businesses face when navigating change. His legal practice 
+                    has reinforced his skills in active listening, conflict resolution, and structured 
+                    problem-solving—critical tools for guiding organizations through AI transformation.
+                  </p>
+                  
+                  <p className="text-primary-700">
+                    Elie's approach combines emotional intelligence with practical business strategy, creating 
+                    safe, structured learning environments where teams can explore AI adoption while addressing 
+                    the human side of technological change.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Values */}
+      {/* Expertise Section */}
       <section className="section-padding bg-primary-50">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
-            Our Mission & Values
+            Our Unique Expertise
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-primary-900 mb-3">Group Facilitation Excellence</h3>
+              <p className="text-primary-600">
+                Over 18 years of experience in group dynamics, learning from leading figures including 
+                Dr. Louis Ormont. Expert in creating cohesive, productive team environments.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-primary-900 mb-3">Emotional Intelligence & AI</h3>
+              <p className="text-primary-600">
+                Uniquely positioned to address both the technical and human aspects of AI adoption, 
+                ensuring teams embrace change rather than resist it.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Scale className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-primary-900 mb-3">Legal & Business Acumen</h3>
+              <p className="text-primary-600">
+                Background in law and mediation brings practical conflict-resolution skills and 
+                understanding of compliance, ethics, and risk management in AI implementation.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Lightbulb className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-primary-900 mb-3">Mindfulness & Resilience</h3>
+              <p className="text-primary-600">
+                Integrating mindfulness techniques to help teams manage change stress and maintain 
+                clarity during digital transformation.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-primary-900 mb-3">Safe Learning Environments</h3>
+              <p className="text-primary-600">
+                Creating non-judgmental spaces where teams can experiment, fail, learn, and grow 
+                together in their AI journey.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <Award className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-primary-900 mb-3">Proven Track Record</h3>
+              <p className="text-primary-600">
+                Successfully guided over 100 organizations through transitions, with deep experience 
+                in personal and professional transformation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
+              Our Unique Approach
+            </h2>
+            
+            <div className="prose prose-lg max-w-none text-primary-700">
+              <p className="mb-6">
+                At Cohort Learning Labs, we believe that successful AI adoption isn't just about 
+                technology—it's about people. Our approach combines cutting-edge AI solutions with 
+                deep understanding of human dynamics and organizational psychology.
+              </p>
+              
+              <h3 className="text-xl font-semibold text-primary-900 mb-4">The Cohort Learning Method</h3>
+              <p className="mb-6">
+                We facilitate interactive, discussion-driven learning environments where your team doesn't 
+                just learn about AI—they experience it, discuss it, and integrate it into their work 
+                culture. This experiential approach ensures:
+              </p>
+              
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <span>Real-time reflection and problem-solving specific to your business</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <span>Group cohesion that transforms resistance into enthusiasm</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <span>Sustainable change that sticks because your team owns it</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <span>Conflict navigation that turns challenges into growth opportunities</span>
+                </li>
+              </ul>
+              
+              <p className="mb-6">
+                Whether we're helping you implement AI tools, develop an AI strategy, or train your team, 
+                we ensure that the human element remains at the center of your digital transformation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-padding bg-primary-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
+            Why Small Businesses Choose Us
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -68,9 +208,9 @@ export default function AboutPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
                 <Target className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-900 mb-2">Mission-Driven</h3>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Deeply Empathetic</h3>
               <p className="text-primary-600">
-                Empowering small businesses to compete and thrive in the AI-driven economy.
+                We understand the challenges of change and support you through every transition.
               </p>
             </div>
             
@@ -78,82 +218,51 @@ export default function AboutPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
                 <Heart className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-900 mb-2">Client-Centered</h3>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Authentic & Non-Judgmental</h3>
               <p className="text-primary-600">
-                Your success is our success. We're committed to delivering real value.
+                Making complex AI topics accessible and meaningful for every team member.
               </p>
             </div>
             
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
-                <Rocket className="w-8 h-8 text-accent" />
+                <Users className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-900 mb-2">Innovation</h3>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Group Dynamics Mastery</h3>
               <p className="text-primary-600">
-                Staying at the forefront of AI developments to bring you the best solutions.
+                Ensuring all team members benefit from shared learning and collective growth.
               </p>
             </div>
             
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
-                <CheckCircle className="w-8 h-8 text-accent" />
+                <Brain className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-900 mb-2">Integrity</h3>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Practical Wisdom</h3>
               <p className="text-primary-600">
-                Transparent, honest, and ethical in all our business practices.
+                Balancing intellectual depth with emotional intelligence and real-world application.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
-            Meet Our Team
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-accent to-blue-600">
+        <div className="container-custom text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Transform Your Business with Human-Centered AI?
           </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop"
-                alt="Team member"
-                className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-semibold text-primary-900 mb-1">John Anderson</h3>
-              <p className="text-primary-600 mb-2">Founder & CEO</p>
-              <p className="text-sm text-primary-500">
-                15+ years in AI and business consulting
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop"
-                alt="Team member"
-                className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-semibold text-primary-900 mb-1">Maria Garcia</h3>
-              <p className="text-primary-600 mb-2">Head of AI Strategy</p>
-              <p className="text-sm text-primary-500">
-                Former Google AI researcher, PhD in Machine Learning
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop"
-                alt="Team member"
-                className="w-48 h-48 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-semibold text-primary-900 mb-1">David Kim</h3>
-              <p className="text-primary-600 mb-2">Implementation Director</p>
-              <p className="text-sm text-primary-500">
-                10+ years in software development and integration
-              </p>
-            </div>
-          </div>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Let's explore how our unique approach to AI adoption can help your team embrace 
+            the future with confidence and enthusiasm.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 bg-white text-accent font-semibold rounded-lg hover:bg-primary-50 transition-colors"
+          >
+            Schedule a Consultation
+          </a>
         </div>
       </section>
     </>
