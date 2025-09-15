@@ -34,7 +34,7 @@ export default function AboutPage() {
               <div className="flex flex-col lg:flex-row gap-8 items-start">
                 <div className="lg:w-1/3">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                    src="/images/elie-schulman.jpg"
                     alt="Elie Schulman"
                     className="w-full rounded-xl shadow-lg"
                   />
