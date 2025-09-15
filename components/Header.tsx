@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { 
-    name: 'Services', 
+  {
+    name: 'Services',
     href: '/services',
     dropdown: [
       { name: 'AI Strategy Consulting', href: '/services#strategy' },
@@ -18,9 +18,16 @@ const navigation = [
       { name: 'Custom Solutions', href: '/services#custom' },
     ]
   },
+  {
+    name: 'Resources',
+    href: '/ebook',
+    dropdown: [
+      { name: 'Free AI Prompting Ebook', href: '/ebook' },
+      { name: 'Blog Articles', href: '/blog' },
+    ]
+  },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
 
