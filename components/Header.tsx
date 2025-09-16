@@ -41,29 +41,36 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-gray-100">
       <nav className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-8 h-8 text-purple-600 flex items-center justify-center">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+          <Link href="/" className="flex items-center gap-3 text-decoration-none">
+            <div className="w-9 h-9 bg-purple-600 rounded-md flex items-center justify-center text-white p-1.5">
+              <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
+                {/* Chair 1 (top) */}
                 <rect x="11" y="2" width="2" height="6" rx="0.5"/>
                 <rect x="10" y="7" width="4" height="1.5" rx="0.3"/>
-                <rect x="19" y="6" width="2" height="6" rx="0.5" transform="rotate(60 20 9)"/>
-                <rect x="18.5" y="11" width="4" height="1.5" rx="0.3" transform="rotate(60 20.5 11.75)"/>
-                <rect x="19" y="12" width="2" height="6" rx="0.5" transform="rotate(120 20 15)"/>
-                <rect x="18.5" y="10.5" width="4" height="1.5" rx="0.3" transform="rotate(120 20.5 11.25)"/>
+                {/* Chair 2 (top-right) */}
+                <rect x="17.5" y="5" width="2" height="6" rx="0.5" transform="rotate(60 18.5 8)"/>
+                <rect x="16.8" y="9.8" width="4" height="1.5" rx="0.3" transform="rotate(60 18.8 10.5)"/>
+                {/* Chair 3 (bottom-right) */}
+                <rect x="17.5" y="13" width="2" height="6" rx="0.5" transform="rotate(120 18.5 16)"/>
+                <rect x="16.8" y="12.7" width="4" height="1.5" rx="0.3" transform="rotate(120 18.8 13.5)"/>
+                {/* Chair 4 (bottom) */}
                 <rect x="11" y="16" width="2" height="6" rx="0.5" transform="rotate(180 12 19)"/>
                 <rect x="10" y="15.5" width="4" height="1.5" rx="0.3" transform="rotate(180 12 16.25)"/>
-                <rect x="3" y="12" width="2" height="6" rx="0.5" transform="rotate(240 4 15)"/>
-                <rect x="1.5" y="10.5" width="4" height="1.5" rx="0.3" transform="rotate(240 3.5 11.25)"/>
-                <rect x="3" y="6" width="2" height="6" rx="0.5" transform="rotate(300 4 9)"/>
-                <rect x="1.5" y="11" width="4" height="1.5" rx="0.3" transform="rotate(300 3.5 11.75)"/>
+                {/* Chair 5 (bottom-left) */}
+                <rect x="4.5" y="13" width="2" height="6" rx="0.5" transform="rotate(240 5.5 16)"/>
+                <rect x="3.8" y="12.7" width="4" height="1.5" rx="0.3" transform="rotate(240 5.8 13.5)"/>
+                {/* Chair 6 (top-left) */}
+                <rect x="4.5" y="5" width="2" height="6" rx="0.5" transform="rotate(300 5.5 8)"/>
+                <rect x="3.8" y="9.8" width="4" height="1.5" rx="0.3" transform="rotate(300 5.8 10.5)"/>
+                {/* Center circle (table) */}
                 <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
               </svg>
             </div>
-            <div className="flex flex-col">
-              <span className="font-semibold text-lg text-gray-900 leading-tight">Cohort Learning Labs</span>
-              <span className="text-xs text-gray-600 leading-tight">Collaborative Learning in the Age of AI</span>
+            <div>
+              <div className="text-gray-900 text-xl font-semibold">Cohort Learning Labs</div>
+              <span className="text-gray-600 text-xs font-normal block -mt-0.5">Collaborative Learning in the Age of AI</span>
             </div>
           </Link>
 
