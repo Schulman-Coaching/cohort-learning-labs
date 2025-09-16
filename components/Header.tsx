@@ -43,11 +43,28 @@ export default function Header() {
       <nav className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-7 h-7 bg-purple-600 rounded flex items-center justify-center">
-              <span className="text-white font-bold text-xs">CL</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="w-8 h-8 text-purple-600 flex items-center justify-center">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="11" y="2" width="2" height="6" rx="0.5"/>
+                <rect x="10" y="7" width="4" height="1.5" rx="0.3"/>
+                <rect x="19" y="6" width="2" height="6" rx="0.5" transform="rotate(60 20 9)"/>
+                <rect x="18.5" y="11" width="4" height="1.5" rx="0.3" transform="rotate(60 20.5 11.75)"/>
+                <rect x="19" y="12" width="2" height="6" rx="0.5" transform="rotate(120 20 15)"/>
+                <rect x="18.5" y="10.5" width="4" height="1.5" rx="0.3" transform="rotate(120 20.5 11.25)"/>
+                <rect x="11" y="16" width="2" height="6" rx="0.5" transform="rotate(180 12 19)"/>
+                <rect x="10" y="15.5" width="4" height="1.5" rx="0.3" transform="rotate(180 12 16.25)"/>
+                <rect x="3" y="12" width="2" height="6" rx="0.5" transform="rotate(240 4 15)"/>
+                <rect x="1.5" y="10.5" width="4" height="1.5" rx="0.3" transform="rotate(240 3.5 11.25)"/>
+                <rect x="3" y="6" width="2" height="6" rx="0.5" transform="rotate(300 4 9)"/>
+                <rect x="1.5" y="11" width="4" height="1.5" rx="0.3" transform="rotate(300 3.5 11.75)"/>
+                <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
+              </svg>
             </div>
-            <span className="font-medium text-lg text-gray-900">Cohort Learning Labs</span>
+            <div className="flex flex-col">
+              <span className="font-semibold text-lg text-gray-900 leading-tight">Cohort Learning Labs</span>
+              <span className="text-xs text-gray-600 leading-tight">Collaborative Learning in the Age of AI</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
