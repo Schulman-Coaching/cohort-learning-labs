@@ -35,50 +35,51 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-primary-200">
-      <nav className="container-custom">
-        <div className="flex justify-between items-center py-4">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">CL</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center">
+              <span className="text-white font-bold text-sm">CL</span>
             </div>
-            <div>
-              <span className="font-bold text-xl text-primary-900">Cohort Learning Labs</span>
-              <span className="hidden md:block text-xs text-primary-600">AI Solutions for Small Business</span>
+            <div className="flex flex-col">
+              <span className="font-semibold text-lg text-gray-900 leading-tight">Cohort Learning Labs</span>
+              <span className="hidden sm:block text-xs text-gray-500 leading-tight">AI Solutions for Small Business</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="flex items-center space-x-1 text-primary-700 hover:text-accent transition-colors py-2">
+                    <button className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-accent transition-colors duration-200 rounded-md hover:bg-gray-50">
                       <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-3 h-3" />
                     </button>
                     <AnimatePresence>
-                      {dropdownOpen && (
+                      {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
+                          initial={{ opacity: 0, y: -8 }}
                           animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-primary-100 overflow-hidden"
+                          exit={{ opacity: 0, y: -8 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-200 py-2"
                         >
                           {item.dropdown.map((subItem) => (
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block px-4 py-3 text-primary-700 hover:bg-primary-50 hover:text-accent transition-colors"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-accent transition-colors duration-200"
                             >
                               {subItem.name}
                             </Link>
@@ -90,7 +91,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-primary-700 hover:text-accent transition-colors py-2"
+                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-accent transition-colors duration-200 rounded-md hover:bg-gray-50"
                   >
                     {item.name}
                   </Link>
@@ -99,7 +100,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent-hover transition-colors"
+              className="ml-4 bg-accent text-white px-5 py-2 text-sm font-medium rounded-md hover:bg-accent/90 transition-colors duration-200"
             >
               Get Started
             </Link>
@@ -107,13 +108,13 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 rounded-md hover:bg-gray-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-primary-700" />
+              <X className="w-6 h-6 text-gray-600" />
             ) : (
-              <Menu className="w-6 h-6 text-primary-700" />
+              <Menu className="w-6 h-6 text-gray-600" />
             )}
           </button>
         </div>
@@ -125,25 +126,26 @@ export default function Header() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden overflow-hidden"
+              transition={{ duration: 0.2 }}
+              className="lg:hidden overflow-hidden border-t border-gray-200"
             >
-              <div className="py-4 space-y-2">
+              <div className="py-4 space-y-1">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="block py-2 text-primary-700 hover:text-accent transition-colors"
+                      className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md mx-2 transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
                     </Link>
                     {item.dropdown && (
-                      <div className="ml-4 space-y-1">
+                      <div className="ml-6 space-y-1 mt-2">
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block py-1 text-sm text-primary-600 hover:text-accent transition-colors"
+                            className="block px-4 py-2 text-xs text-gray-600 hover:text-accent hover:bg-gray-50 rounded-md mx-2 transition-colors duration-200"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.name}
@@ -153,13 +155,15 @@ export default function Header() {
                     )}
                   </div>
                 ))}
-                <Link
-                  href="/contact"
-                  className="block bg-accent text-white px-6 py-2 rounded-lg text-center hover:bg-accent-hover transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
+                <div className="px-6 pt-4">
+                  <Link
+                    href="/contact"
+                    className="block w-full bg-accent text-white px-5 py-3 text-sm font-medium rounded-md text-center hover:bg-accent/90 transition-colors duration-200"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
