@@ -189,6 +189,204 @@ export default function ValuesPage() {
         </div>
       </section>
 
+      {/* Synthesis Framework */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
+              Our Theoretical Foundation
+            </h2>
+            <div className="bg-primary-50 rounded-xl p-8 mb-8">
+              <h3 className="text-2xl font-bold text-primary-900 mb-4">
+                Synthesis Framework: Ormont Group Psychoanalysis + T-Groups for AI Transformation
+              </h3>
+              <p className="text-primary-700 leading-relaxed mb-6">
+                This synthesis combines Louis Ormont's group psychoanalysis principles with T-Group methodology to create
+                a powerful learning framework specifically designed for navigating corporate AI transformation. The integrated
+                approach addresses both the psychological and interpersonal challenges that emerge when organizations undergo
+                fundamental technological change.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {/* Core Synthesis Principles */}
+              <div>
+                <h3 className="text-xl font-bold text-primary-900 mb-6">Core Synthesis Principles</h3>
+                <div className="space-y-6">
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">1. Group as Primary Agent of Change + Experiential Learning</h4>
+                    <p className="text-primary-700 mb-3">
+                      <strong>Synthesis:</strong> The group becomes the primary vehicle for processing AI transformation anxiety
+                      and developing adaptive responses through real-time experiential learning.
+                    </p>
+                    <p className="text-primary-600">
+                      <strong>Application:</strong> Rather than top-down AI training, employees learn to navigate AI transformation
+                      through peer interaction, shared emotional processing, and collective problem-solving.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">2. Resistance as Information + Feedback Loops</h4>
+                    <p className="text-primary-700 mb-3">
+                      <strong>Synthesis:</strong> Resistance to AI adoption is treated as valuable information about underlying
+                      fears and concerns, processed through immediate group feedback mechanisms.
+                    </p>
+                    <p className="text-primary-600">
+                      <strong>Application:</strong> When employees resist AI tools or express anxiety about job displacement,
+                      these reactions become learning opportunities for the entire group to explore and address collectively.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">3. Here-and-Now Focus</h4>
+                    <p className="text-primary-700 mb-3">
+                      <strong>Synthesis:</strong> Both methodologies emphasize present-moment awareness, which is crucial for
+                      AI transformation where future uncertainty creates anxiety.
+                    </p>
+                    <p className="text-primary-600">
+                      <strong>Application:</strong> Groups focus on immediate experiences with AI tools, current emotional responses
+                      to change, and real-time problem-solving rather than abstract future scenarios.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Challenges Addressed */}
+              <div>
+                <h3 className="text-xl font-bold text-primary-900 mb-6">AI Transformation Challenges Addressed</h3>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-primary-900 mb-4">Psychological Challenges</h4>
+                  <div className="grid md:grid-cols-1 gap-4">
+                    <div className="bg-primary-50 rounded-lg p-6">
+                      <h5 className="font-bold text-primary-900 mb-2">AI Anxiety and Fear of Obsolescence</h5>
+                      <p className="text-primary-700 text-sm">
+                        Create safe spaces for expressing AI-related fears while developing collective coping strategies
+                        through group support and shared emotional processing.
+                      </p>
+                    </div>
+                    <div className="bg-primary-50 rounded-lg p-6">
+                      <h5 className="font-bold text-primary-900 mb-2">Identity and Role Confusion</h5>
+                      <p className="text-primary-700 text-sm">
+                        Support identity evolution through group witnessing and validation, helping individuals redefine
+                        their professional identity in an AI-augmented workplace.
+                      </p>
+                    </div>
+                    <div className="bg-primary-50 rounded-lg p-6">
+                      <h5 className="font-bold text-primary-900 mb-2">Learned Helplessness vs. AI Empowerment</h5>
+                      <p className="text-primary-700 text-sm">
+                        Transform helplessness into collaborative empowerment by addressing underlying beliefs about
+                        competence while building confidence through successful group interactions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-primary-900 mb-4">Interpersonal Challenges</h4>
+                  <div className="grid md:grid-cols-1 gap-4">
+                    <div className="bg-primary-50 rounded-lg p-6">
+                      <h5 className="font-bold text-primary-900 mb-2">Human-AI Collaboration Dynamics</h5>
+                      <p className="text-primary-700 text-sm">
+                        Develop healthy relationships with AI as collaborative partners through exploring transference
+                        and practicing communication skills needed for human-AI teams.
+                      </p>
+                    </div>
+                    <div className="bg-primary-50 rounded-lg p-6">
+                      <h5 className="font-bold text-primary-900 mb-2">Intergenerational Technology Gaps</h5>
+                      <p className="text-primary-700 text-sm">
+                        Bridge generational divides through mutual support and learning, creating cross-generational
+                        learning opportunities that address age-related resistance and competency concerns.
+                      </p>
+                    </div>
+                    <div className="bg-primary-50 rounded-lg p-6">
+                      <h5 className="font-bold text-primary-900 mb-2">Leadership in AI-Augmented Teams</h5>
+                      <p className="text-primary-700 text-sm">
+                        Develop adaptive leadership skills for AI-human hybrid teams by examining leadership patterns
+                        and practicing new leadership behaviors in safe environments.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Key Mechanisms */}
+              <div>
+                <h3 className="text-xl font-bold text-primary-900 mb-6">Key Learning Mechanisms</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">Emotional Processing of Change</h4>
+                    <p className="text-primary-700 text-sm">
+                      Group provides container for processing complex emotions about AI transformation, reducing anxiety
+                      and increasing emotional regulation.
+                    </p>
+                  </div>
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">Collective Problem-Solving</h4>
+                    <p className="text-primary-700 text-sm">
+                      Group tackles AI implementation challenges together, creating shared ownership and reducing
+                      individual burden while generating creative solutions.
+                    </p>
+                  </div>
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">Peer Learning and Modeling</h4>
+                    <p className="text-primary-700 text-sm">
+                      Members learn from each other's AI experiences and coping strategies, accelerating learning
+                      and increasing confidence through shared wisdom.
+                    </p>
+                  </div>
+                  <div className="bg-white border border-primary-200 rounded-lg p-6">
+                    <h4 className="font-bold text-primary-900 mb-3">Reality Testing</h4>
+                    <p className="text-primary-700 text-sm">
+                      Group provides feedback on AI-related perceptions and behaviors, enabling more accurate
+                      assessment of AI capabilities and limitations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Unique Value Proposition */}
+              <div className="bg-gradient-to-r from-primary-50 to-accent/5 rounded-xl p-8">
+                <h3 className="text-xl font-bold text-primary-900 mb-4">Our Unique Value Proposition</h3>
+                <p className="text-primary-700 mb-4">
+                  This synthesis creates a learning environment that goes beyond traditional AI training by:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-primary-700 text-sm">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" />
+                      <span>Addressing the whole person in AI transformation, not just technical skills</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" />
+                      <span>Leveraging group wisdom rather than relying solely on expert instruction</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" />
+                      <span>Processing emotional and psychological barriers to AI adoption</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-primary-700 text-sm">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" />
+                      <span>Building resilient, adaptive teams capable of ongoing technological change</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" />
+                      <span>Creating sustainable behavior change through peer support and accountability</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" />
+                      <span>Developing both individual and collective intelligence for AI era challenges</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Living Documentation */}
       <section className="section-padding bg-primary-50">
         <div className="container-custom">
