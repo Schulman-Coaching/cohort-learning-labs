@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'About Elie', href: '/about-elie' },
+  { name: 'Our Approach', href: '/our-approach' },
   { name: 'Values', href: '/values' },
   {
     name: 'Services',
