@@ -153,28 +153,154 @@ export default function OurApproachPage() {
                   </div>
                 </div>
                 <p className="text-primary-700 mb-4">
-                  Cohn's structural framework provides:
+                  Central to our approach is Cohn's emphasis on <strong>meaningful themes</strong> that serve as the organizing principle for transformative learning:
                 </p>
                 <ul className="space-y-2 text-primary-700">
                   <li className="flex items-start">
                     <Circle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
-                    <span><strong>Four-Factor Model:</strong> Dynamic balance between I (individual), We (group), It (theme/task), and Globe (environment/context)</span>
+                    <span><strong>Theme-Centered Focus:</strong> All learning organized around compelling themes that resonate with participants' lived experience</span>
                   </li>
                   <li className="flex items-start">
                     <Circle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
-                    <span><strong>Selective Authenticity:</strong> Being genuine while remaining conscious of what serves the group's purpose</span>
+                    <span><strong>Four-Factor Balance:</strong> Dynamic equilibrium between I (individual), We (group), It (theme), and Globe (context)</span>
                   </li>
                   <li className="flex items-start">
                     <Circle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
-                    <span><strong>Chairperson Principle:</strong> Each participant takes responsibility for their own engagement and learning</span>
+                    <span><strong>Selective Authenticity:</strong> Being genuine while remaining conscious of what serves the group's theme and purpose</span>
                   </li>
                   <li className="flex items-start">
                     <Circle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
-                    <span><strong>Disturbance Precedence:</strong> Addressing what interferes with group process before continuing with tasks</span>
+                    <span><strong>Chairperson Principle:</strong> Each participant takes responsibility for their own engagement with the theme</span>
                   </li>
                   <li className="flex items-start">
                     <Circle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
-                    <span><strong>Living Learning:</strong> Integration of cognitive, emotional, and bodily experience in service of growth</span>
+                    <span><strong>Living Learning:</strong> Integration of cognitive, emotional, and embodied experience through thematic exploration</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Learning Themes */}
+      <section className="section-padding bg-primary-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
+              Our Core Learning Themes
+            </h2>
+            <p className="text-lg text-primary-700 text-center mb-12">
+              Drawing from Ruth Cohn's Theme-Centered Interaction approach, each cohort learning lab centers around
+              powerful themes that organize our exploration, discussion, and transformation. These themes serve as
+              the "It" in Cohn's I-We-It-Globe framework, providing meaningful focus while honoring individual needs,
+              group dynamics, and environmental context.
+            </p>
+
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-accent">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">Challenge and Change</h3>
+                    <p className="text-primary-700 leading-relaxed">
+                      Exploring how we individually and collectively navigate uncertainty, resist or embrace transformation,
+                      and find courage to step into the unknown. This theme invites deep examination of our relationship
+                      with change itself—both technological and personal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-accent">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">AI Adaptation</h3>
+                    <p className="text-primary-700 leading-relaxed">
+                      Moving beyond surface-level tool training to explore the deeper psychological, relational, and
+                      cultural dimensions of integrating artificial intelligence into our work and lives. We examine
+                      both opportunities and anxieties with equal curiosity and care.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-accent">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">Learning for a Lifetime</h3>
+                    <p className="text-primary-700 leading-relaxed">
+                      Cultivating the mindsets, practices, and relationships that sustain continuous growth and adaptation
+                      throughout our careers and lives. This theme explores how to remain curious, resilient, and open
+                      to new possibilities at any stage of life.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-accent">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">Learning with Curiosity</h3>
+                    <p className="text-primary-700 leading-relaxed">
+                      Rediscovering and nurturing our natural capacity for wonder, exploration, and questioning.
+                      This theme helps participants reconnect with the joy of discovery while developing sophisticated
+                      approaches to inquiry and investigation in both personal and professional contexts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-accent">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">5</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">Suspending Our Assumptions for a Moment</h3>
+                    <p className="text-primary-700 leading-relaxed">
+                      Practicing the art of temporarily setting aside our habitual ways of thinking and perceiving
+                      to create space for new insights and possibilities. This theme develops capacity for intellectual
+                      humility, perspective-taking, and breakthrough thinking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 bg-gradient-to-r from-accent/10 to-blue-600/10 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-primary-900 mb-4 text-center">How Themes Create Transformation</h3>
+              <p className="text-primary-700 leading-relaxed mb-4">
+                These themes aren't just topics for discussion—they become living containers for exploration that:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <ul className="space-y-2 text-primary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
+                    <span>Provide meaningful focus while honoring diverse perspectives and experiences</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
+                    <span>Connect personal growth with professional development and organizational change</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
+                    <span>Generate insights that participants can immediately apply in their work and relationships</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-primary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
+                    <span>Create shared language and understanding that deepens group connection</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
+                    <span>Organize learning around what matters most to participants' current challenges</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-accent mt-1 mr-3 flex-shrink-0" />
+                    <span>Balance intellectual rigor with emotional authenticity and practical application</span>
                   </li>
                 </ul>
               </div>
@@ -184,7 +310,7 @@ export default function OurApproachPage() {
       </section>
 
       {/* What Makes Our Synthesis Unique */}
-      <section className="section-padding bg-primary-50">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
