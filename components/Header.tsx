@@ -7,48 +7,37 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'About Elie', href: '/about-elie' },
-  { name: 'Our Approach', href: '/our-approach' },
-  { name: 'Values', href: '/values' },
   {
-    name: 'Services',
-    href: '/services',
-    megaMenu: {
-      sections: [
-        {
-          title: 'Consulting Services',
-          links: [
-            { name: 'AI Strategy Consulting', href: '/services#strategy', description: 'Strategic planning for AI adoption' },
-            { name: 'Implementation Support', href: '/services#implementation', description: 'Hands-on implementation guidance' },
-            { name: 'Team Training', href: '/services#training', description: 'Comprehensive team education' },
-            { name: 'Custom Solutions', href: '/services#custom', description: 'Tailored AI solutions for your business' },
-          ]
-        },
-        {
-          title: 'Learning Programs',
-          links: [
-            { name: 'Cohort-Based Learning', href: '/programs#cohort', description: 'Collaborative group learning experiences' },
-            { name: 'Executive Workshops', href: '/programs#executive', description: 'Leadership-focused AI training' },
-            { name: 'Team Facilitation', href: '/programs#facilitation', description: 'Group dynamics and collaboration' },
-          ]
-        }
-      ]
-    }
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
+    name: 'About Us',
+    href: '/about',
     dropdown: [
-      { name: 'Free AI Prompting Ebook', href: '/ebook' },
-      { name: 'Blog Articles', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Templates & Tools', href: '/tools' },
+      { name: 'Who We Are', href: '/about/who-we-are' },
+      { name: 'Our Approach', href: '/about/our-approach' },
+      { name: 'Our Impact', href: '/about/our-impact' },
+      { name: 'Our Team', href: '/about/our-team' },
+      { name: 'Media & Press', href: '/about/media-press' },
     ]
   },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Contact', href: '/contact' },
+  {
+    name: 'Our Work',
+    href: '/work',
+    dropdown: [
+      { name: 'Events & Opportunities', href: '/work/events-opportunities' },
+      { name: 'Our Strategies', href: '/work/our-strategies' },
+      { name: 'Trainings', href: '/work/trainings' },
+      { name: 'Facilitation & Convening', href: '/work/facilitation-convening' },
+      { name: 'Film & Resources', href: '/work/film-resources' },
+    ]
+  },
+  {
+    name: 'Sectors',
+    href: '/sectors',
+    dropdown: [
+      { name: 'Why These Sectors', href: '/sectors/why-these-sectors' },
+      { name: 'Faith Leaders & Communities', href: '/sectors/faith-leaders-communities' },
+      { name: 'Higher Education', href: '/sectors/higher-education' },
+    ]
+  },
 ]
 
 export default function Header() {
@@ -139,57 +128,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
-                  {item.megaMenu ? (
-                    <div
-                      className="relative"
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}
-                    >
-                      <button className="flex items-center space-x-1 text-sm font-medium text-gray-900 hover:text-purple-600 transition-colors duration-150 py-2">
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, y: -8 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -8 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-white rounded-lg shadow-xl border border-gray-200 p-6 z-50"
-                          >
-                            <div className="grid grid-cols-2 gap-8">
-                              {item.megaMenu.sections.map((section, index) => (
-                                <div key={index}>
-                                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                                    <Users className="w-4 h-4 text-purple-600" />
-                                    {section.title}
-                                  </h3>
-                                  <ul className="space-y-3">
-                                    {section.links.map((link) => (
-                                      <li key={link.name}>
-                                        <Link
-                                          href={link.href}
-                                          className="block group"
-                                        >
-                                          <div className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors duration-150">
-                                            {link.name}
-                                          </div>
-                                          <div className="text-sm text-gray-500 mt-1">
-                                            {link.description}
-                                          </div>
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : item.dropdown ? (
+                  {item.dropdown ? (
                     <div
                       className="relative"
                       onMouseEnter={() => setActiveDropdown(item.name)}
@@ -272,28 +211,7 @@ export default function Header() {
                       >
                         {item.name}
                       </Link>
-                      {item.megaMenu && (
-                        <div className="ml-4 space-y-2 pb-2">
-                          {item.megaMenu.sections.map((section) => (
-                            <div key={section.title}>
-                              <div className="px-4 py-2 text-sm font-medium text-gray-600">
-                                {section.title}
-                              </div>
-                              {section.links.map((link) => (
-                                <Link
-                                  key={link.name}
-                                  href={link.href}
-                                  className="block px-8 py-2 text-sm text-gray-700 hover:text-purple-600 transition-colors duration-150"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                >
-                                  {link.name}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                      {item.dropdown && !item.megaMenu && (
+                      {item.dropdown && (
                         <div className="ml-4 space-y-1">
                           {item.dropdown.map((subItem) => (
                             <Link
