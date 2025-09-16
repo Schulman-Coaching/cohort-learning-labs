@@ -60,7 +60,7 @@ export default function ValuesPage() {
                 <p className="text-primary-700 leading-relaxed">
                   A group of individuals who journey through an experience together, bound by shared timing and mutual support.
                   Unlike a class (which implies hierarchy) or a team (which suggests unified output), a cohort maintains
-                  individual paths while benefiting from collective momentum. Drawing from Louis Ormont's insight that "the group,
+                  individual paths while benefiting from collective momentum. Drawing from <a href="https://scholar.google.com/scholar?q=louis+ormont+group+therapy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Louis Ormont's</a> insight that "the group,
                   and not the facilitator, is the primary agent of change," our cohorts harness the transformative power of
                   peer learning and collective wisdom. In our work, cohorts create accountability without conformity, and
                   connection without consensus.
