@@ -27,7 +27,7 @@ Legacy paths permanently redirect (HTTP 308) rather than 404, so crawlers treat 
 
 `/writing` stays a redirect. Published writing is at [elieschulman.com](https://elieschulman.com), not on this site. Newsletter APIs are not implemented. Consultations are booked through a Calendly embed on `/contact#book`; email remains a fallback.
 
-Cohort dates, remaining seats, and prices live in `lib/cohorts.ts`. Open cohorts are $199 per member per month; private groups are quoted.
+Cohort dates, remaining seats, and prices live in `lib/cohorts.ts`. Open cohorts are four weekly 90-minute sessions for $500 USD total per member, paid as a one-time package; private groups are quoted.
 
 ## Local development
 
@@ -62,3 +62,22 @@ The GitHub repository is connected to Vercel. Pull requests may receive automati
 The repository is owned by the Humans-Benefiting-from-AI organization. The main branch is protected by the Protect main ruleset, so changes require a pull request and a passing Vercel check.
 
 Do not trigger a manual production deployment for ordinary content changes.
+
+## September 2026 experience improvements
+
+Homepage copy now leads with the central inquiry into disagreement. The cohort
+link jumps to the existing times and fees; consultation actions go to the booking
+anchor. The example session is explicitly illustrative. Public pages declare
+canonical URLs. The existing typefaces are packaged with the application through
+Fontsource so builds do not depend on fetching Google Fonts.
+
+Booking has a persistent direct Calendly link, a visible timeout/error fallback,
+and no fixed 320px minimum width. The primary menu identifies the current page
+and supports Escape with focus returned to its toggle.
+
+Decision resolved on 7 September 2026: the user approved replacing the previous
+12-week monthly offer with four weekly 90-minute sessions for $500 USD total per
+member, and publishing both prepared website versions. `lib/cohorts.ts`, the
+homepage, session page, FAQ and contributor instructions reflect this offer.
+Existing cohort start dates and local meeting times remain in place. Private
+groups are quoted. Consultation remains the first step before joining.

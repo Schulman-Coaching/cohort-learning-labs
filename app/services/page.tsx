@@ -4,6 +4,7 @@ import Link from 'next/link'
 import ConsultationLink from '@/components/ConsultationLink'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services' },
   title: 'A session | Cohort Learning Labs',
   description:
     'Ninety minutes, once a week, with the same six people. How a Cohort Learning Labs T-group actually feels.',
@@ -108,9 +109,9 @@ export default function ServicesPage() {
               </h1>
               <div className="mt-11 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
                 <p className="max-w-[46ch] font-serif text-[19px] leading-[1.55] text-ink-soft lg:text-[23px]">
-                  Twelve weeks, by video. No slides, no reading assigned by us, no exercises.
-                  The group agrees on one relationship to look at, and then studies its own
-                  reactions to it, as they happen.
+                  Four weekly sessions of ninety minutes, by video. No slides, no reading
+                  assigned by us, no exercises. The group agrees on one relationship to look at,
+                  and then studies its own reactions to it, as they happen.
                 </p>
                 <p className="border-l border-rule pl-6 pt-1.5 font-sans text-[14px] leading-[1.75] text-muted">
                   The method is a T-group — a training group. It has been practised for decades

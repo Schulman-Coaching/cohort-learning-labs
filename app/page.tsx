@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CohortTable from '@/components/CohortTable'
 import ConsultationLink from '@/components/ConsultationLink'
+import { OPEN_COHORT_PRICE } from '@/lib/cohorts'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 const sessionNotes = [
   {
@@ -45,7 +51,7 @@ const norms = [
   { n: '06', text: 'What is said here stays here. That one is not negotiable.' },
 ]
 
-const stimuli = ['Marriage', 'Parent to child', 'Child to parent', 'Employee to employer']
+const stimuli = ['Partners', 'Parents and children', 'Friends', 'Colleagues']
 
 export default function Home() {
   return (
@@ -56,18 +62,20 @@ export default function Home() {
             <p className="rail-label">Start here</p>
             <div>
               <h1 className="max-w-[20ch] font-serif text-[44px] leading-[0.96] tracking-[-0.015em] text-ink min-[480px]:text-[56px] lg:text-[88px]">
-                Most people spend the first few weeks deciding whether to speak.
+                What happens between us when we disagree?
               </h1>
 
               <div className="mt-11 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
                 <p className="max-w-[46ch] font-serif text-[19px] leading-[1.55] text-ink-soft lg:text-[23px]">
-                  That is allowed here, and it is not wasted time. Six to eight people meet by
-                  video for ninety minutes, week after week, and study the one thing none of us
-                  can see on our own: what we are actually like with other people.
+                  Six to eight people. Ninety minutes. A recurring conversation about what
+                  happens when we see things differently — and how each of us responds.
+                  Facilitated by Elie Schulman, with room to notice what usually passes too
+                  quickly to examine.
                 </p>
                 <p className="border-l border-rule pl-6 pt-1.5 font-sans text-[14px] leading-[1.75] text-muted">
-                  No curriculum to get through. No agreement to arrive at. The group chooses
-                  what it will look at, and nobody is hurried.
+                  You might speak, hold back, explain yourself, or change the subject. Here,
+                  those moments become something we can learn from together. You do not need to
+                  have the right words before you begin.
                 </p>
               </div>
 
@@ -81,11 +89,17 @@ export default function Home() {
                 >
                   Read what a session looks like
                 </Link>
+                <a
+                  href="#cohorts"
+                  className="border-b border-rule pb-0.5 font-sans text-[14px] text-ink-muted hover:text-accent-hover"
+                >
+                  View times and fees
+                </a>
               </div>
 
               <p className="mt-9 font-sans text-[12.5px] tracking-[0.06em] text-faint">
-                Facilitated by Elie Schulman · Groups meet by video · Open cohorts and private
-                groups
+                Open cohorts: four weekly 90-minute sessions · {OPEN_COHORT_PRICE} per person ·
+                Groups meet by video
               </p>
             </div>
           </div>
@@ -104,13 +118,13 @@ export default function Home() {
                 <p>
                   Marriage. A parent and a child. A child and a parent. An employee and an
                   employer. It can arrive as a text, a topic, or a skill you want to get better
-                  at, but it is always a relationship, and the six of you agree on it before
+                  at, but it is always a relationship, and the group agrees on it before
                   anything else happens.
                 </p>
                 <p>
                   Then you react to it, and to each other, out loud, as it happens. Those
-                  reactions are the curriculum. Within twenty minutes the text has stopped being
-                  the subject and the room is the subject, which is the point.
+                  reactions become part of the learning. The text gives us a place to begin;
+                  what happens between us gives us something to examine.
                 </p>
               </div>
               <div className="mt-10 grid grid-cols-2 gap-px border border-rule bg-rule md:grid-cols-4">
@@ -130,12 +144,15 @@ export default function Home() {
       <section className="border-b border-rule-dark bg-ink py-14 text-paper lg:py-24">
         <div className="container-custom">
           <div className="rail">
-            <p className="rail-label">02 — One hour of one group</p>
+            <p className="rail-label">02 — Inside a session</p>
             <div>
               <h2 className="max-w-[26ch] font-serif text-[36px] leading-[1.08] tracking-[-0.01em] text-paper lg:text-[52px]">
-                Ninety minutes, and nothing we brought in from outside.
+                A paragraph. Different reactions. Something to notice.
               </h2>
-              <div className="mt-11 border border-rule-dark">
+              <p className="mt-5 max-w-[58ch] font-sans text-[14px] leading-relaxed text-onink">
+                An illustrative session, showing the kinds of moments a group might explore.
+              </p>
+              <div className="mt-8 border border-rule-dark">
                 {sessionNotes.map((note) => (
                   <div
                     key={note.time}
@@ -247,7 +264,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding border-b border-rule bg-ground">
+      <section
+        id="cohorts"
+        className="section-padding scroll-mt-8 border-b border-rule bg-ground"
+      >
         <div className="container-custom">
           <div className="rail">
             <p className="rail-label">05 — Ways to join</p>

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import ConsultationLink from '@/components/ConsultationLink'
+import { OPEN_COHORT_PRICE } from '@/lib/cohorts'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/faq' },
   title: 'FAQ | Cohort Learning Labs',
   description:
     'The things people ask before they apply: what a Cohort Learning Labs group is, what being in the room is like, and the practicalities.',
@@ -59,7 +61,7 @@ const groups = [
     items: [
       [
         'How long is the commitment?',
-        'Twelve weeks, ninety minutes a week, at the same time. The recurrence is what makes a new behaviour ordinary rather than an experiment you did once. Many members continue past twelve weeks.',
+        'Four weekly sessions, ninety minutes each, at the same time. This gives the group time to return to what happened, notice patterns, and experience the work over more than one conversation.',
       ],
       [
         'What if I miss a week?',
@@ -67,7 +69,7 @@ const groups = [
       ],
       [
         'What does it cost?',
-        'Open cohorts are $199 per member per month, listed beside the start date on the home page. Private groups are quoted after a conversation about scope.',
+        `Open cohorts cost ${OPEN_COHORT_PRICE} per member for all four 90-minute sessions. This is a one-time package price. Private groups are quoted after a conversation about scope.`,
       ],
       [
         'Can I bring my own team?',
