@@ -27,7 +27,7 @@ Legacy paths permanently redirect (HTTP 308) rather than 404, so crawlers treat 
 
 `/writing` stays a redirect. Published writing is at [elieschulman.com](https://elieschulman.com), not on this site. Newsletter APIs are not implemented. Consultations are booked through a Calendly embed on `/contact#book`; email remains a fallback.
 
-Cohort dates, remaining seats, and prices live in `lib/cohorts.ts`. Open cohorts are $199 per member per month; private groups are quoted.
+Cohort dates, remaining seats, and prices live in `lib/cohorts.ts`. Open cohorts are four weekly 90-minute sessions for $500 USD total per member, paid as a one-time package; private groups are quoted.
 
 ## Local development
 
@@ -75,8 +75,9 @@ Booking has a persistent direct Calendly link, a visible timeout/error fallback,
 and no fixed 320px minimum width. The primary menu identifies the current page
 and supports Escape with focus returned to its toggle.
 
-Open decision: the published 12-week, $199/month cohorts in `lib/cohorts.ts`
-conflict with the newer four-session, $500 offer. This improvement batch leaves
-operational dates, prices and Stripe untouched. Before a commercial update,
-settle whether the four-session offer replaces or accompanies the existing
-cohorts, then reconcile `lib/cohorts.ts`, FAQ, README and sales links together.
+Decision resolved on 7 September 2026: the user approved replacing the previous
+12-week monthly offer with four weekly 90-minute sessions for $500 USD total per
+member, and publishing both prepared website versions. `lib/cohorts.ts`, the
+homepage, session page, FAQ and contributor instructions reflect this offer.
+Existing cohort start dates and local meeting times remain in place. Private
+groups are quoted. Consultation remains the first step before joining.

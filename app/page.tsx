@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CohortTable from '@/components/CohortTable'
 import ConsultationLink from '@/components/ConsultationLink'
+import { OPEN_COHORT_PRICE } from '@/lib/cohorts'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -97,8 +98,8 @@ export default function Home() {
               </div>
 
               <p className="mt-9 font-sans text-[12.5px] tracking-[0.06em] text-faint">
-                Facilitated by Elie Schulman · Groups meet by video · Open cohorts and private
-                groups
+                Open cohorts: four weekly 90-minute sessions · {OPEN_COHORT_PRICE} per person ·
+                Groups meet by video
               </p>
             </div>
           </div>

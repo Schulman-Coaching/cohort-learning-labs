@@ -71,4 +71,4 @@ Slot availability lives in Calendly (Google Calendar connected on that event). D
 
 ## Voice
 
-Plain, concrete copy. Recreate wording from the design handoff rather than inventing marketing language. Cohort table dates, seats, and prices in `lib/cohorts.ts` are operational data — edit that file, not hardcoded page copy. Open cohorts are $199 per member per month; private groups stay Quoted. Writing lives at elieschulman.com, not on this site.
+Plain, concrete copy. Recreate wording from the design handoff rather than inventing marketing language. Cohort table dates, seats, and prices in `lib/cohorts.ts` are operational data — edit that file, not hardcoded page copy. Open cohorts are four weekly 90-minute sessions for $500 USD total per member as a one-time package; private groups stay Quoted. `OPEN_COHORT_PRICE` in `lib/cohorts.ts` is shared by the table, homepage and FAQ. Writing lives at elieschulman.com, not on this site.
