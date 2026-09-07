@@ -189,6 +189,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section-padding border-b border-rule bg-ground">
+        <div className="container-custom">
+          <div className="rail">
+            <p className="rail-label">Related work</p>
+            <div>
+              <h2 className="font-serif text-[32px] leading-[1.2] text-ink">
+                Noticing, language, and learning.
+              </h2>
+              <p className="mt-6 max-w-[60ch] font-serif text-[20px] leading-[1.65] text-ink-soft">
+                These questions also run through Elie’s writing and YishHeh, his contemporary
+                invitation to pause before prayer. Each has its own setting: reading a text,
+                individual practice, or learning with a group.
+              </p>
+              <div className="mt-8 grid gap-8 md:grid-cols-2">
+                <div className="border-t border-rule pt-5">
+                  <h3 className="font-serif text-[24px]">Writing</h3>
+                  <p className="mt-3 font-sans text-[14px] leading-[1.75] text-muted">
+                    Essays, Torah, and books on how language and assumptions shape what we see.
+                  </p>
+                  <a
+                    className="mt-4 inline-flex min-h-11 items-center font-sans text-[14px] underline underline-offset-4"
+                    href="https://elieschulman.com/start-here/?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work&utm_content=about"
+                  >
+                    Find something to read →
+                  </a>
+                </div>
+                <div className="border-t border-rule pt-5">
+                  <h3 className="font-serif text-[24px]">YishHeh</h3>
+                  <p className="mt-3 font-sans text-[14px] leading-[1.75] text-muted">
+                    An individual practice before tefillah, inspired by the Mishnah’s account of
+                    the early pietists. You can explore it independently of a cohort.
+                  </p>
+                  <a
+                    className="mt-4 inline-flex min-h-11 items-center font-sans text-[14px] underline underline-offset-4"
+                    href="https://www.yishhe.org/practice/motivation?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work&utm_content=about"
+                  >
+                    Begin with motivation at YishHeh →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-accent py-14 text-accent-on lg:py-[104px]">
         <div className="container-custom">
           <div className="rail">
