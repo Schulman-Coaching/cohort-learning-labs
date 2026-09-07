@@ -4,6 +4,7 @@ import CohortTable from '@/components/CohortTable'
 import { CALENDLY_URL } from '@/lib/booking'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Start a conversation | Cohort Learning Labs',
   description:
     'Pick an open time. Elie meets you for thirty minutes before anyone joins a group.',

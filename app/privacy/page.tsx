@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy | Cohort Learning Labs',
   description: 'How Cohort Learning Labs handles information submitted through its website.',
 }

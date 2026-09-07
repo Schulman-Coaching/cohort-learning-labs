@@ -1,19 +1,31 @@
 import type { Metadata } from 'next'
-import { EB_Garamond, Space_Grotesk } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { SITE_URL } from '@/lib/routes'
 
-const serif = EB_Garamond({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
+const serif = localFont({
+  src: [
+    {
+      path: '../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-normal.woff2',
+      weight: '400 800',
+      style: 'normal',
+    },
+    {
+      path: '../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-italic.woff2',
+      weight: '400 800',
+      style: 'italic',
+    },
+  ],
   variable: '--font-serif',
   display: 'swap',
 })
 
-const sans = Space_Grotesk({
-  subsets: ['latin'],
+const sans = localFont({
+  src: '../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2',
+  weight: '300 700',
   variable: '--font-sans',
   display: 'swap',
 })
@@ -23,6 +35,7 @@ const description =
   'Cohort Learning Labs creates recurring groups where people examine how they communicate, experience, and respond to differences that matter.'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title,
   description,
   keywords:

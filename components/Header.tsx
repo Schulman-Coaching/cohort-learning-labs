@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
 import ConsultationLink from '@/components/ConsultationLink'
 import Mark from '@/components/Mark'
 import { headerRoutes } from '@/lib/routes'
@@ -11,17 +11,33 @@ import { headerRoutes } from '@/lib/routes'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const pathname = usePathname()
+
   return (
     <header className="border-b border-rule bg-ground">
-      <nav className="container-custom">
+      <nav
+        className="container-custom"
+        aria-label="Primary navigation"
+        onKeyDown={(event) => {
+          if (event.key === 'Escape' && mobileMenuOpen) {
+            setMobileMenuOpen(false)
+            toggleRef.current?.focus()
+          }
+        }}
+      >
         <div className="flex h-[88px] items-center justify-between">
-          <Link href="/" className="flex items-center gap-[14px]">
+          <Link
+            href="/"
+            className="flex min-w-0 items-center gap-2 sm:gap-[14px]"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <Mark className="h-[30px] w-[30px] shrink-0 text-accent" />
             <div>
-              <div className="font-serif text-[23px] font-medium leading-[1.15] tracking-[0.01em] text-ink">
+              <div className="font-serif text-[20px] sm:text-[23px] font-medium leading-[1.15] tracking-[0.01em] text-ink">
                 Cohort Learning Labs
               </div>
-              <span className="mt-[3px] block font-sans text-[10.5px] uppercase tracking-[0.2em] text-faint">
+              <span className="mt-[3px] block font-sans text-[9px] sm:text-[10.5px] uppercase tracking-[0.12em] sm:tracking-[0.2em] text-faint">
                 Six to eight people, thinking out loud
               </span>
             </div>
@@ -32,6 +48,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
+                aria-current={pathname === item.href ? 'page' : undefined}
                 className="font-sans text-[13px] tracking-[0.02em] text-ink-muted transition-colors duration-150 hover:text-accent-hover"
               >
                 {item.name}
@@ -43,10 +60,12 @@ export default function Header() {
           </div>
 
           <button
+            ref={toggleRef}
             type="button"
+            aria-controls="mobile-navigation"
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileMenuOpen}
-            className="p-2 lg:hidden"
+            className="ml-2 min-h-11 min-w-11 shrink-0 p-2 lg:hidden"
             onClick={() => setMobileMenuOpen((open) => !open)}
           >
             {mobileMenuOpen ? (
@@ -57,38 +76,33 @@ export default function Header() {
           </button>
         </div>
 
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              className="overflow-hidden border-t border-rule lg:hidden"
-            >
-              <div className="space-y-1 py-4">
-                {headerRoutes.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-4 py-3 font-sans text-[15px] text-ink-muted transition-colors duration-150 hover:text-accent-hover"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <div className="px-4 pt-4">
-                  <ConsultationLink
-                    className="block w-full bg-accent px-4 py-3 text-center font-sans text-[15px] font-medium text-accent-on transition-colors duration-150 hover:bg-accent-hover"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Schedule a consultation
-                  </ConsultationLink>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div
+          id="mobile-navigation"
+          hidden={!mobileMenuOpen}
+          className="border-t border-rule lg:hidden"
+        >
+          <div className="space-y-1 py-4">
+            {headerRoutes.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                aria-current={pathname === item.href ? 'page' : undefined}
+                className="block px-4 py-3 font-sans text-[15px] text-ink-muted transition-colors duration-150 hover:text-accent-hover"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="px-4 pt-4">
+              <ConsultationLink
+                className="block w-full bg-accent px-4 py-3 text-center font-sans text-[15px] font-medium text-accent-on transition-colors duration-150 hover:bg-accent-hover"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Schedule a consultation
+              </ConsultationLink>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
   )

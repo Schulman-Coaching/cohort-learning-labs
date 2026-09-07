@@ -15,6 +15,11 @@
     @apply outline-none ring-2 ring-accent ring-offset-2;
   }
 
+  [aria-current='page'] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
   h1,
   h2,
   h3 {

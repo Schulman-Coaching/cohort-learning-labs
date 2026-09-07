@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ConsultationLink from '@/components/ConsultationLink'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'Elie Schulman | Cohort Learning Labs',
   description:
     'For about two years, Elie Schulman sat in a group without speaking. That is why nobody in a Cohort Learning Labs group is hurried.',

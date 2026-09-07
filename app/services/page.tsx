@@ -4,6 +4,7 @@ import Link from 'next/link'
 import ConsultationLink from '@/components/ConsultationLink'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services' },
   title: 'A session | Cohort Learning Labs',
   description:
     'Ninety minutes, once a week, with the same six people. How a Cohort Learning Labs T-group actually feels.',

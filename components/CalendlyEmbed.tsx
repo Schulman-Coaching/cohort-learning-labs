@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { calendlyEmbedUrl } from '@/lib/booking'
 
 const SCRIPT_SRC = 'https://assets.calendly.com/assets/external/widget.js'
@@ -82,6 +82,7 @@ function loadCalendly(): Promise<CalendlyApi> {
 }
 
 export default function CalendlyEmbed({ url }: { url: string }) {
+  const [failed, setFailed] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const embedUrl = calendlyEmbedUrl(url)
 
@@ -94,6 +95,22 @@ export default function CalendlyEmbed({ url }: { url: string }) {
 
     let cancelled = false
 
+    const timeout = window.setTimeout(() => {
+      if (!cancelled) setFailed(true)
+    }, 12000)
+    const onMessage = (event: MessageEvent) => {
+      const frame = parent.querySelector('iframe')
+      if (
+        event.origin === new URL(embedUrl).origin &&
+        event.source === frame?.contentWindow &&
+        event.data?.event === 'calendly.event_type_viewed'
+      ) {
+        window.clearTimeout(timeout)
+        setFailed(false)
+      }
+    }
+    window.addEventListener('message', onMessage)
+
     loadCalendly()
       .then((calendly) => {
         if (cancelled) return
@@ -104,22 +121,41 @@ export default function CalendlyEmbed({ url }: { url: string }) {
         })
       })
       .catch(() => {
-        // Keep the empty shell; the contact page still offers email below.
+        if (!cancelled) setFailed(true)
+        window.clearTimeout(timeout)
       })
 
     return () => {
       cancelled = true
+      window.clearTimeout(timeout)
+      window.removeEventListener('message', onMessage)
       parent.innerHTML = ''
     }
   }, [embedUrl])
 
   return (
-    <div className="border border-rule bg-ground">
+    <div className="min-w-0 border border-rule bg-ground">
+      <div className="border-b border-rule p-5 font-sans text-sm leading-relaxed">
+        <p role="status">
+          {failed
+            ? 'The calendar is taking longer than expected. You can book directly on Calendly.'
+            : 'Choose a time below, or open the calendar in a separate tab.'}
+        </p>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-block border-b border-accent pb-1 text-accent hover:text-accent-hover"
+        >
+          Open booking calendar <span className="sr-only">(opens in a new tab)</span>
+        </a>
+      </div>
       <div
         ref={containerRef}
         className="calendly-inline-widget w-full"
         data-auto-load="false"
-        style={{ minWidth: '320px', height: '720px' }}
+        hidden={failed}
+        style={{ minWidth: 0, height: '720px' }}
       />
     </div>
   )

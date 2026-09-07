@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ConsultationLink from '@/components/ConsultationLink'
 import { cohorts } from '@/lib/cohorts'
 
 export default function CohortTable({ showApply = true }: { showApply?: boolean }) {
@@ -22,12 +22,9 @@ export default function CohortTable({ showApply = true }: { showApply?: boolean 
           </span>
           <span className="font-sans text-[13.5px] text-muted">{cohort.price}</span>
           {showApply ? (
-            <Link
-              href="/contact"
-              className="w-fit border-b border-rule pb-0.5 font-sans text-[13.5px] text-accent transition-colors duration-150 hover:text-accent-hover"
-            >
+            <ConsultationLink className="w-fit border-b border-rule pb-0.5 font-sans text-[13.5px] text-accent transition-colors duration-150 hover:text-accent-hover">
               {cohort.ctaLabel}
-            </Link>
+            </ConsultationLink>
           ) : null}
         </div>
       ))}

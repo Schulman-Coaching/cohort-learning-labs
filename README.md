@@ -62,3 +62,21 @@ The GitHub repository is connected to Vercel. Pull requests may receive automati
 The repository is owned by the Humans-Benefiting-from-AI organization. The main branch is protected by the Protect main ruleset, so changes require a pull request and a passing Vercel check.
 
 Do not trigger a manual production deployment for ordinary content changes.
+
+## September 2026 experience improvements
+
+Homepage copy now leads with the central inquiry into disagreement. The cohort
+link jumps to the existing times and fees; consultation actions go to the booking
+anchor. The example session is explicitly illustrative. Public pages declare
+canonical URLs. The existing typefaces are packaged with the application through
+Fontsource so builds do not depend on fetching Google Fonts.
+
+Booking has a persistent direct Calendly link, a visible timeout/error fallback,
+and no fixed 320px minimum width. The primary menu identifies the current page
+and supports Escape with focus returned to its toggle.
+
+Open decision: the published 12-week, $199/month cohorts in `lib/cohorts.ts`
+conflict with the newer four-session, $500 offer. This improvement batch leaves
+operational dates, prices and Stripe untouched. Before a commercial update,
+settle whether the four-session offer replaces or accompanies the existing
+cohorts, then reconcile `lib/cohorts.ts`, FAQ, README and sales links together.

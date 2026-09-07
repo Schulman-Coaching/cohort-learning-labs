@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import ConsultationLink from '@/components/ConsultationLink'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/faq' },
   title: 'FAQ | Cohort Learning Labs',
   description:
     'The things people ask before they apply: what a Cohort Learning Labs group is, what being in the room is like, and the practicalities.',
