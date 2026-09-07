@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://elieschulman.com/start-here/?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work"
+                  href="https://elieschulman.com/start-here/?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work&utm_content=footer"
                   className="font-sans text-[13.5px] transition-colors duration-150 hover:text-accent-light"
                 >
                   Writing at elieschulman.com
@@ -82,7 +82,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.yishhe.org/practice/motivation?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work"
+                  href="https://www.yishhe.org/practice/motivation?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work&utm_content=footer"
                   className="font-sans text-[13.5px] transition-colors duration-150 hover:text-accent-light"
                 >
                   YishHeh · Individual practice before prayer
