@@ -202,7 +202,7 @@ export default function AboutPage() {
                 which cohort is the right place to look at it.
               </p>
               <ConsultationLink className="mt-10 inline-block bg-accent-on px-[30px] py-4 font-sans text-[14px] font-medium text-accent transition-colors duration-150 hover:bg-[#efe6dd]">
-                Schedule a 30-minute consultation
+                Book a 30-minute conversation
               </ConsultationLink>
             </div>
           </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import CalendlyEmbed from '@/components/CalendlyEmbed'
 import CohortTable from '@/components/CohortTable'
 import { CALENDLY_URL } from '@/lib/booking'
+import { campaignQuery, type CampaignParams } from '@/lib/campaign'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
@@ -16,21 +17,28 @@ const steps = [
   {
     n: '01',
     title: 'You pick a time',
-    body: 'The calendar only shows hours that are already free on his Google Calendar. Choose one; it is held for you.',
+    body: 'Choose an available time in the booking calendar and complete the booking. Your confirmation includes the joining details.',
   },
   {
     n: '02',
     title: 'Thirty minutes by video',
-    body: 'Half of it is him working out whether this is the right room for you at all. It is a conversation, not a screening call, and there is nothing to prepare.',
+    body: 'Talk about what brings you here, how the group works, and whether the four-session commitment fits. You do not need a prepared account of yourself.',
   },
   {
     n: '03',
     title: 'A cohort, or not yet',
-    body: 'If the composition is right you are placed in a group and it starts on the listed date. If it is not, he will say so and tell you what he would suggest instead.',
+    body: 'If you both decide to proceed, Elie confirms the group, dates, attendance and cancellation terms, and sends the payment instructions. Pay the $500 total fee after that agreement; joining details follow confirmation.',
   },
 ]
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<CampaignParams>
+}) {
+  const tags = campaignQuery(await searchParams)
+  const bookingUrl = new URL(CALENDLY_URL)
+  new URLSearchParams(tags).forEach((value, key) => bookingUrl.searchParams.set(key, value))
   return (
     <>
       <section className="border-b border-rule bg-ground py-14 lg:pb-20 lg:pt-24">
@@ -43,9 +51,9 @@ export default function ContactPage() {
               </h1>
               <div className="mt-11 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
                 <p className="max-w-[46ch] font-serif text-[19px] leading-[1.55] text-ink-soft lg:text-[23px]">
-                  Everyone speaks with him for thirty minutes before joining a group. The slots
-                  below are the ones already cleared against his calendar. Prefer to write
-                  first? A paragraph by email is still plenty.
+                  Everyone speaks with him for thirty minutes before joining a group. Choose an
+                  available time below. Prefer to write first? A paragraph by email is still
+                  plenty.
                 </p>
                 <p className="border-l border-rule pl-6 pt-1.5 font-sans text-[14px] leading-[1.75] text-muted">
                   Not everyone is placed. Composition matters more here than filling a seat.
@@ -56,7 +64,7 @@ export default function ContactPage() {
                   href="#book"
                   className="bg-accent px-7 py-[15px] font-sans text-[14px] font-medium text-accent-on transition-colors duration-150 hover:bg-accent-hover"
                 >
-                  Schedule a 30-minute consultation
+                  Book a 30-minute conversation
                 </a>
                 <a
                   href="tel:+15162062480"
@@ -76,7 +84,7 @@ export default function ContactPage() {
             <p className="rail-label">01 — Book a time</p>
             <div>
               {CALENDLY_URL ? (
-                <CalendlyEmbed url={CALENDLY_URL} />
+                <CalendlyEmbed url={bookingUrl.toString()} />
               ) : (
                 <div className="border border-rule bg-ground px-7 py-10">
                   <p className="max-w-[46ch] font-serif text-[19px] leading-[1.62] text-ink-soft">
@@ -155,13 +163,13 @@ export default function ContactPage() {
                 Say the thing you would not usually put in a first conversation.
               </h2>
               <p className="mt-7 max-w-[52ch] font-serif text-[19px] leading-[1.62] text-accent-prose lg:text-[21px]">
-                It is the same instruction as the group, and it saves both of you a month.
+                Begin with what you are curious about, including any uncertainty about joining.
               </p>
               <a
                 href="#book"
                 className="mt-10 inline-block bg-accent-on px-[30px] py-4 font-sans text-[14px] font-medium text-accent transition-colors duration-150 hover:bg-[#efe6dd]"
               >
-                Schedule a 30-minute consultation
+                Book a 30-minute conversation
               </a>
             </div>
           </div>

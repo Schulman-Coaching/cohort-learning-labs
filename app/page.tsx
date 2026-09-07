@@ -67,22 +67,25 @@ export default function Home() {
 
               <div className="mt-11 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
                 <p className="max-w-[46ch] font-serif text-[19px] leading-[1.55] text-ink-soft lg:text-[23px]">
-                  Six to eight people. Ninety minutes. A recurring conversation about what
-                  happens when we see things differently — and how each of us responds.
-                  Facilitated by Elie Schulman, with room to notice what usually passes too
-                  quickly to examine.
+                  When a conversation becomes difficult, do you go quiet, explain harder, or try
+                  to smooth things over? In this small group, we slow those moments down and
+                  explore what else becomes possible. Four weekly sessions, facilitated by Elie
+                  Schulman.
                 </p>
                 <p className="border-l border-rule pl-6 pt-1.5 font-sans text-[14px] leading-[1.75] text-muted">
-                  You might speak, hold back, explain yourself, or change the subject. Here,
-                  those moments become something we can learn from together. You do not need to
-                  have the right words before you begin.
+                  Practice noticing when you withdraw, checking an assumption about someone, and
+                  putting a disagreement into words. These are possibilities to explore
+                  together; each person begins somewhere different.
                 </p>
               </div>
 
               <div className="mt-12 flex flex-wrap items-center gap-5">
-                <ConsultationLink className="bg-accent px-7 py-[15px] font-sans text-[14px] font-medium text-accent-on transition-colors duration-150 hover:bg-accent-hover">
-                  Schedule a 30-minute consultation
-                </ConsultationLink>
+                <Link
+                  href="/cohorts"
+                  className="bg-accent px-7 py-[15px] font-sans text-[14px] font-medium text-accent-on transition-colors duration-150 hover:bg-accent-hover"
+                >
+                  Explore the four-session cohort
+                </Link>
                 <Link
                   href="/services"
                   className="border-b border-[#b9b1a2] pb-0.5 font-sans text-[14px] text-ink-muted transition-colors duration-150 hover:text-accent-hover"
@@ -230,20 +233,20 @@ export default function Home() {
               />
               <div>
                 <h2 className="max-w-[26ch] font-serif text-[36px] leading-[1.1] tracking-[-0.01em] text-ink lg:text-[44px]">
-                  Elie Schulman sat in a group for two years without speaking.
+                  Enough room to notice. A chance to try again.
                 </h2>
                 <div className="mt-7 flex max-w-[56ch] flex-col gap-[22px] font-serif text-[19px] leading-[1.62] text-ink-soft lg:text-[21px]">
                   <p>
-                    He was twenty-two, the youngest in the room by thirty years, and he went
-                    every Monday at 7:45 and said nothing for a hundred sessions. Nobody dragged
-                    him out of it. The group stayed, week after week, and left the door open
-                    until he found his own way in.
+                    Elie helps the group return to an exchange while it is still possible to
+                    examine it. What did you hear? What did you assume? What did you want to
+                    say, and what happened instead? A short series gives you several chances to
+                    return to those questions with the same people.
                   </p>
                   <p>
-                    So he will not call on you, hurry you, or supply your sentence. His work is
-                    the process — the patterns, the pace, the container — and he keeps it open a
-                    little longer than is comfortable. Your positions, choices and relationships
-                    stay yours.
+                    His own long experience of being quiet in groups shapes his patience. He
+                    will not force disclosure. He will help members put reactions into words,
+                    hear how those words land, and consider another way of responding. Your
+                    positions, choices and relationships stay yours.
                   </p>
                 </div>
                 <p className="mt-7 max-w-[44ch] border-l border-accent pl-6 font-serif text-[24px] italic leading-[1.4] text-ink">
@@ -302,6 +305,16 @@ export default function Home() {
               </div>
               <div className="mt-12">
                 <CohortTable />
+                <p className="mt-6 font-sans text-sm">
+                  <Link href="/cohorts" className="text-accent underline">
+                    See all four dates and how to join
+                  </Link>
+                </p>
+                <p className="mt-4 font-sans text-sm">
+                  <Link href="/introduction" className="text-accent underline">
+                    Try a free 45-minute introduction on 8 October
+                  </Link>
+                </p>
               </div>
               <p className="mt-5 font-sans text-[12.5px] tracking-[0.04em] text-faint">
                 Everyone speaks with Elie for thirty minutes before joining a group.
@@ -324,7 +337,7 @@ export default function Home() {
                 whether an open cohort or a private group is the right place to look at it.
               </p>
               <ConsultationLink className="mt-10 inline-block bg-accent-on px-[30px] py-4 font-sans text-[14px] font-medium text-accent transition-colors duration-150 hover:bg-[#efe6dd]">
-                Schedule a 30-minute consultation
+                Book a 30-minute conversation
               </ConsultationLink>
             </div>
           </div>

@@ -22,6 +22,8 @@ export interface SiteRoute {
 
 export const siteRoutes: SiteRoute[] = [
   { name: 'Home', href: '/', priority: 1 },
+  { name: 'Join a cohort', href: '/cohorts', inHeader: true, inFooter: true, priority: 0.95 },
+  { name: 'Free introduction', href: '/introduction', inFooter: true, priority: 0.8 },
   { name: 'A session', href: '/services', inHeader: true, inFooter: true, priority: 0.9 },
   { name: 'Elie Schulman', href: '/about', inHeader: true, inFooter: true, priority: 0.9 },
   { name: 'FAQ', href: '/faq', inHeader: true, inFooter: true, priority: 0.7 },

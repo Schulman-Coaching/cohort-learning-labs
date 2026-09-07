@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/services' },
   title: 'A session | Cohort Learning Labs',
   description:
-    'Ninety minutes, once a week, with the same six people. How a Cohort Learning Labs T-group actually feels.',
+    'Ninety minutes, once a week, with the same small group. How a Cohort Learning Labs T-group actually feels.',
 }
 
 const stimuli = [
@@ -36,7 +36,7 @@ const arc = [
   {
     time: '01:05',
     title: 'What that was like',
-    body: 'Five other people describe the effect, in specifics, with your consent to hear it.',
+    body: 'Other members describe the effect, in specifics, with your consent to hear it.',
   },
   {
     time: '01:20',
@@ -105,7 +105,7 @@ export default function ServicesPage() {
             <p className="rail-label">A session</p>
             <div>
               <h1 className="max-w-[20ch] font-serif text-[44px] leading-[0.96] tracking-[-0.015em] text-ink min-[480px]:text-[56px] lg:text-[88px]">
-                Ninety minutes, once a week, with the same six people.
+                Ninety minutes, once a week, with the same small group.
               </h1>
               <div className="mt-11 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
                 <p className="max-w-[46ch] font-serif text-[19px] leading-[1.55] text-ink-soft lg:text-[23px]">
@@ -207,7 +207,7 @@ export default function ServicesPage() {
             <p className="rail-label">03 — One hour, in the room</p>
             <div>
               <h2 className="max-w-[26ch] font-serif text-[36px] leading-[1.08] tracking-[-0.01em] text-paper lg:text-[52px]">
-                A note from the sixth week of one cohort.
+                An illustrative exchange in a session.
               </h2>
               <div className="mt-11 flex max-w-[62ch] flex-col gap-[26px]">
                 {hourNotes.map((note) => (
@@ -227,9 +227,9 @@ export default function ServicesPage() {
                 ))}
               </div>
               <p className="mt-11 max-w-[58ch] font-serif text-[19px] leading-[1.62] text-onink lg:text-[21px]">
-                The text was the occasion. By minute twenty it had stopped being the subject,
-                and the six people in the room were the subject. That is not a digression from
-                the work. It is the work.
+                The text gives the group a place to begin. As people respond, their different
+                readings and reactions to one another become material for inquiry. This example
+                shows a possibility, rather than a report from a particular cohort.
               </p>
             </div>
           </div>
@@ -387,7 +387,7 @@ export default function ServicesPage() {
                 recurring, and which group is the right place to look at it.
               </p>
               <ConsultationLink className="mt-10 inline-block bg-accent-on px-[30px] py-4 font-sans text-[14px] font-medium text-accent transition-colors duration-150 hover:bg-[#efe6dd]">
-                Schedule a 30-minute consultation
+                Book a 30-minute conversation
               </ConsultationLink>
             </div>
           </div>
