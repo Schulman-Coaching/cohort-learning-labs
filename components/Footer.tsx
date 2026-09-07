@@ -74,10 +74,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://elieschulman.com"
+                  href="https://elieschulman.com/start-here/?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work"
                   className="font-sans text-[13.5px] transition-colors duration-150 hover:text-accent-light"
                 >
                   Writing at elieschulman.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.yishhe.org/practice/motivation?utm_source=cohortlearninglabs&utm_medium=website&utm_campaign=related_work"
+                  className="font-sans text-[13.5px] transition-colors duration-150 hover:text-accent-light"
+                >
+                  YishHeh · Individual practice before prayer
                 </a>
               </li>
               <li className="max-w-[30ch] pt-1 font-sans text-[13.5px] leading-[1.6] text-faint">
