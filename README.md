@@ -81,3 +81,7 @@ member, and publishing both prepared website versions. `lib/cohorts.ts`, the
 homepage, session page, FAQ and contributor instructions reflect this offer.
 Existing cohort start dates and local meeting times remain in place. Private
 groups are quoted. Consultation remains the first step before joining.
+
+## October enrollment campaign
+
+`/cohorts` contains dates, expectations and the enrollment sequence. `/introduction` describes the October 8 free introduction and email RSVP. Tuesday timing requires confirmation because of a calendar conflict. See `docs/campaign-2026-09-07.md`. Campaign tags are forwarded to Calendly; the enrollment tracker is private and manually updated.

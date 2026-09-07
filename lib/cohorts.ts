@@ -6,6 +6,9 @@ export interface Cohort {
   seatsScarce?: boolean
   price: string
   ctaLabel: string
+  dates?: string[]
+  timeZone?: string
+  scheduleStatus?: string
 }
 
 /**
@@ -23,9 +26,12 @@ export const cohorts: Cohort[] = [
     id: 'tuesday-israel',
     when: 'Tuesday, 19:00 Israel',
     duration: '4 weekly sessions, from 13 October 2026',
-    seats: 'Open',
+    seats: 'Timing to confirm',
     price: OPEN_COHORT_PRICE,
-    ctaLabel: 'Apply',
+    ctaLabel: 'Book a conversation',
+    dates: ['13 October', '20 October', '27 October', '3 November'],
+    timeZone: 'Asia/Jerusalem',
+    scheduleStatus: 'Tuesday timing is being confirmed. Ask Elie before making plans.',
   },
   {
     id: 'thursday-eastern',
@@ -33,7 +39,10 @@ export const cohorts: Cohort[] = [
     duration: '4 weekly sessions, from 15 October 2026',
     seats: 'Open',
     price: OPEN_COHORT_PRICE,
-    ctaLabel: 'Apply',
+    ctaLabel: 'Book a conversation',
+    dates: ['15 October', '22 October', '29 October', '5 November'],
+    timeZone: 'America/New_York',
+    scheduleStatus: '08:30–10:00 US Eastern each Thursday.',
   },
   {
     id: 'private',

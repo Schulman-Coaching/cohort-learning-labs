@@ -35,8 +35,8 @@ const groups = [
     label: '02 — Being in the room',
     items: [
       [
-        'What if I say nothing for weeks?',
-        'Then you say nothing for weeks. Elie sat in a group for two years without speaking, and nobody dragged him out of it. You will not be called on or drawn out. Your silence is information the group can work with, not a debt you owe it.',
+        'What if I find it difficult to speak?',
+        'You do not need to arrive ready to disclose personal things. Listening, noticing a reaction, or saying that you are finding it difficult to speak can be a beginning. Elie helps the group make room for participation without forcing it. Four sessions offer a first experience of this practice, not a promise that a longstanding pattern will disappear.',
       ],
       [
         'What if I talk too much?',
@@ -65,7 +65,7 @@ const groups = [
       ],
       [
         'What if I miss a week?',
-        'Tell the group in advance. An absence is felt by five other people, so it belongs to the room rather than to your calendar alone. Repeated absence changes what the group can do, and Elie will raise it.',
+        'Tell the group in advance. An absence affects the other members, so it belongs to the room rather than to your calendar alone. Repeated absence changes what the group can do, and Elie will raise it.',
       ],
       [
         'What does it cost?',
@@ -141,7 +141,7 @@ export default function FaqPage() {
                 usually him working out whether this is the right room for you at all.
               </p>
               <ConsultationLink className="mt-10 inline-block bg-accent-on px-[30px] py-4 font-sans text-[14px] font-medium text-accent transition-colors duration-150 hover:bg-[#efe6dd]">
-                Schedule a 30-minute consultation
+                Book a 30-minute conversation
               </ConsultationLink>
             </div>
           </div>
